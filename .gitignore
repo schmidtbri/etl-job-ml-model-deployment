@@ -85,7 +85,7 @@ celerybeat-schedule
 .env
 .venv
 env/
-venv/
+venv
 ENV/
 env.bak/
 venv.bak/
@@ -106,3 +106,5 @@ venv.bak/
 .idea
 
 .DS_Store
+
+.minio.sys

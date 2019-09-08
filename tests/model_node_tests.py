@@ -1,5 +1,4 @@
 import unittest
-from traceback import print_tb
 
 from model_etl.model_node import MLModelTransformer
 

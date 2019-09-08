@@ -16,7 +16,6 @@ venv: ## create virtual environment
 dependencies: ## install dependencies from requirements.txt
 	pip install -r requirements.txt
 
-
 test-dependencies: ## install dependencies from test_requirements.txt
 	pip install -r test_requirements.txt
 
