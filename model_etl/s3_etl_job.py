@@ -4,7 +4,7 @@ from fs_s3fs import S3FS
 
 
 def get_services(**options):
-    """ This function instantiates an S# filesystem service for loading and saving files from the ETL. """
+    """ This function instantiates an S3 filesystem service for loading and saving files from the ETL. """
     return {
         'fs': S3FS(options["bucket"],
                    aws_access_key_id=options["key"],
