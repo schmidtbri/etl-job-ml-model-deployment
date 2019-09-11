@@ -1,4 +1,4 @@
-TEST_PATH=./
+TEST_PATH=tests
 
 .DEFAULT_GOAL := help
 
@@ -31,4 +31,8 @@ clean-venv: ## remove all packages from virtual environment
 	pip freeze | grep -v "^-e" | xargs pip uninstall -y
 
 test: clean-pyc ## Run unit test suite.
-	py.test --verbose --color=yes $(TEST_PATH)
+	pytest --verbose --color=yes $(TEST_PATH)
+
+test-reports: clean-pyc ## Run unit test suite with reporting
+	mkdir -p reports
+	python -m coverage run --source model_etl -m pytest --verbose --color=yes --junitxml=./reports/unit_tests.xml $(TEST_PATH)
