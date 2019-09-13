@@ -1,4 +1,4 @@
-TEST_PATH=tests
+TEST_PATH=./tests
 
 .DEFAULT_GOAL := help
 
@@ -50,6 +50,8 @@ test: clean-pyc ## Run unit test suite.
 test-reports: clean-pyc ## Run unit test suite with reporting
 	mkdir -p reports
 	python -m coverage run --source model_etl -m pytest --verbose --color=yes --junitxml=./reports/unit_tests.xml $(TEST_PATH)
+	coverage xml -o ./reports/coverage.xml
+	rm -rf .coverage
 
 clean-test:	## Remove test artifacts
 	rm -rf .pytest_cache
