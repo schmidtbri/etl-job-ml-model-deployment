@@ -1,8 +1,11 @@
-import bonobo
+"""Module that runs bonobo graph on local files."""
+import model_etl  # this import makes sure we can find site packages
 from model_etl.graph import get_graph
+import bonobo
 
 
 def get_argument_parser(parser=None):
+    """Extend CLI parser provided by bobobo and returns it."""
     parser = bonobo.get_argument_parser(parser=parser)
 
     parser.add_argument("--input_file", "-i", type=str, default=None, help="Path of the input file.")

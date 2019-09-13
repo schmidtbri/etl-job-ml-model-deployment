@@ -1,10 +1,12 @@
-import bonobo
+"""Module that runs bonobo graph on files in S3 service."""
+import model_etl  # this import makes sure we can find site packages
 from model_etl.graph import get_graph
+import bonobo
 from fs_s3fs import S3FS
 
 
 def get_services(**options):
-    """ This function instantiates an S3 filesystem service for loading and saving files from the ETL. """
+    """Instantiate an S3 filesystem service for loading and saving files from the ETL."""
     return {
         'fs': S3FS(options["bucket"],
                    aws_access_key_id=options["key"],
@@ -14,6 +16,7 @@ def get_services(**options):
 
 
 def get_argument_parser(parser=None):
+    """Extend CLI parser provided by bobobo and returns it."""
     parser = bonobo.get_argument_parser(parser=parser)
 
     parser.add_argument("--input_file", "-i", type=str, default=None, help="Path of the input file.")
