@@ -50,12 +50,5 @@ setup(
     install_requires=['bonobo==0.6.4',
                       'fs-s3fs==1.1.1',
                       'iris-model@git+https://github.com/schmidtbri/ml-model-abc-improvements#egg=iris_model@master'],
-    # the dependencies are only included if we are creating a deployment package
-    package_data=None if create_deployment_package is False else parameter_value,
-    entry_points={
-        'console_scripts': [
-            'etl_job=model_etl.etl_job:main',
-            's3_etl_job=model_etl.s3_etl_job:main'
-        ],
-    }
+    package_data={'': []} if create_deployment_package is False else parameter_value
 )

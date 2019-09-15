@@ -1,6 +1,7 @@
 """Module that builds the ETL DAG."""
 import bonobo
 from bonobo.nodes.io.json import LdjsonReader, LdjsonWriter
+
 from model_etl.model_node import MLModelTransformer
 
 
