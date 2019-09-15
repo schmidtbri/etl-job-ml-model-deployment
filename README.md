@@ -14,7 +14,7 @@ Then create a virtual environment and activate it:
 ```bash
 
 # go into the project directory
-cd using-ml-model-abc
+cd etl-job-ml-model-deployment
 
 make venv
 
