@@ -1,7 +1,7 @@
 # ETL Job ML Model Deployment
 Code to deploy an ML model inside a batch job
 
-This code is used in this [blog post]().
+This code is used in this [blog post](https://medium.com/@brianschmidt_78145/a-batch-job-ml-model-deployment-da41b8ea5a99).
 
 ## Installation 
 The makefile included with this project contains targets that help to automate several tasks.
