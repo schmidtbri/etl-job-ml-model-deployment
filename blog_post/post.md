@@ -1,4 +1,4 @@
-Title: Deploying an ML Model In an ETL Job
+Title: A Batch Job ML Model Deployment
 Date: 2019-09-20 09:24
 Category: Blog
 Slug: etl-job-ml-model-deployment
