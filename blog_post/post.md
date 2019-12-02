@@ -6,9 +6,9 @@ Authors: Brian Schmidt
 Summary: In previous blog posts I showed how to develop an ML model in such a way that makes it easy to deploy, and I showed how to create a web app that is able to deploy any model that followed the same design pattern. However, not all deployments of ML model are deployed within web apps. In this blog post I deploy the same model used in the previous blog posts as an ETL job.
 
 This blog post continues the ideas started in
-[three](https://towardsdatascience.com/a-simple-ml-model-base-class-ab40e2febf13)
-[previous](https://towardsdatascience.com/improving-the-mlmodel-base-class-eded137629bd)
-[blog posts](https://towardsdatascience.com/using-the-ml-model-base-class-7b984edf47c5).
+[three]({filename}/articles/a-simple-ml-model-base-class/post.md)
+[previous]({filename}/articles/improving-the-mlmodel-base-class/post.md)
+[blog posts]({filename}/articles/using-ml-model-abc.md).
 
 The code in this blog post can be found in this [github
 repo](https://github.com/schmidtbri/etl-job-ml-model-deployment).
@@ -42,7 +42,7 @@ destination system.
 
 A big distinction between ML models that are deployed in an ETL job and
 the Flask web application shown in the [previous blog
-post](https://towardsdatascience.com/using-the-ml-model-base-class-7b984edf47c5)
+post]({filename}/articles/using-ml-model-abc.md)
 is that the ETL job is *not* a real time system since it is not expected
 to return predictions to the client quickly. ETLs are also meant to
 process thousands of records at a time, whereas a web app processes one
@@ -118,7 +118,7 @@ easier to use.
 Running a machine learning model prediction step inside an ETL DAG
 requires many of the same things as running a model inside a web
 application. In the [previous blog
-post](https://towardsdatascience.com/using-the-ml-model-base-class-7b984edf47c5)
+post]({filename}/articles/using-ml-model-abc.md)
 we managed instances of MLModel classes inside a ModelManager singleton
 object. The ModelManager object was used by the web application to
 maintain a list of MLModel objects, and returned information about them
@@ -184,7 +184,7 @@ Now we can test the MLModelTransformation class to make sure it\'s
 working as expected. First, we have to install a model to the
 environment, we'll install the iris\_model package that was built in a
 [previous blog
-post](https://towardsdatascience.com/improving-the-mlmodel-base-class-eded137629bd):
+post]({filename}/articles/improving-the-mlmodel-base-class/post.md):
 
 ```bash
 pip install git+https://github.com/schmidtbri/ml-model-abc-improvements
