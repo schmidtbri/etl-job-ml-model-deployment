@@ -8,7 +8,7 @@ Summary: In previous blog posts I showed how to develop an ML model in such a wa
 This blog post continues the ideas started in
 [three]({filename}/articles/a-simple-ml-model-base-class/post.md)
 [previous]({filename}/articles/improving-the-mlmodel-base-class/post.md)
-[blog posts]({filename}/articles/using-ml-model-abc.md).
+[blog posts]({filename}/articles/using-ml-model-abc/post.md).
 
 The code in this blog post can be found in this [github
 repo](https://github.com/schmidtbri/etl-job-ml-model-deployment).
@@ -42,7 +42,7 @@ destination system.
 
 A big distinction between ML models that are deployed in an ETL job and
 the Flask web application shown in the [previous blog
-post]({filename}/articles/using-ml-model-abc.md)
+post]({filename}/articles/using-ml-model-abc/post.md)
 is that the ETL job is *not* a real time system since it is not expected
 to return predictions to the client quickly. ETLs are also meant to
 process thousands of records at a time, whereas a web app processes one
@@ -118,7 +118,7 @@ easier to use.
 Running a machine learning model prediction step inside an ETL DAG
 requires many of the same things as running a model inside a web
 application. In the [previous blog
-post]({filename}/articles/using-ml-model-abc.md)
+post]({filename}/articles/using-ml-model-abc/post.md)
 we managed instances of MLModel classes inside a ModelManager singleton
 object. The ModelManager object was used by the web application to
 maintain a list of MLModel objects, and returned information about them
