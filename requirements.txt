@@ -13,7 +13,7 @@ fs-s3fs==1.1.1
 graphviz==0.8.4
 idna==2.8
 git+https://github.com/schmidtbri/ml-model-abc-improvements#egg=iris_model
-Jinja2==2.10.1
+Jinja2==2.11.3
 jmespath==0.9.4
 joblib==0.13.2
 MarkupSafe==1.1.1
