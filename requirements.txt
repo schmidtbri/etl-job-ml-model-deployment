@@ -15,7 +15,7 @@ idna==2.8
 git+https://github.com/schmidtbri/ml-model-abc-improvements#egg=iris_model
 Jinja2==2.11.3
 jmespath==0.9.4
-joblib==0.13.2
+joblib==1.2.0
 MarkupSafe==1.1.1
 mondrian==0.8.0
 numpy==1.17.2
